@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Ecommerce</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="Contact.css">
+    </head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav>
+        <div class="nav-container">
+            <div class="logo">radshop</div>
+            <div class="menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="Index.html">Home</a>
+                <a href="Contact.html" aria-current="page">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content" class="contact-container">
+        
+        <h1 class="page-title">Get in Touch</h1>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Contact Information</h2>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <p>kupal st.  brgy. pinutok sa unan Binangonan Rizal</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <p><a href="tel:+12345678900">+1 234 567 8900</a></p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <p><a href="mailto:contact@radshop.com">contact@radshop.com</a></p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            minlength="2"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                        >
+                        <p class="help-text">Please enter your first and last name</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            placeholder="Enter your email address"
+                            autocomplete="email"
+                        >
+                        <p class="help-text">We'll never share your email with anyone else</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input 
+                            type="text" 
+                            id="subject" 
+                            name="subject" 
+                            required
+                            placeholder="What is your message about?"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required
+                            placeholder="Type your message here..."
+                            minlength="10"
+                        ></textarea>
+                        <p class="help-text">Minimum 10 characters</p>
+                    </div>
+                    <button type="submit">Send Message</button>
+                    <div class="success-message" role="alert">
+                        Thank you for your message! We'll get back to you soon.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const button = this.querySelector('button');
+            const successMessage = this.querySelector('.success-message');
+            
+            // Add loading state
+            button.classList.add('loading');
+            button.textContent = 'Sending';
+            
+            // Simulate form submission
+            setTimeout(() => {
+                button.classList.remove('loading');
+                button.textContent = 'Send Message';
+                successMessage.style.display = 'block';
+                this.reset();
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.style.display = 'none';
+                }, 5000);
+            }, 1500);
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'none' || navLinks.style.display === '' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

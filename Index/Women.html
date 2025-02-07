@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Ecommerce</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="Women.css">
+    </head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">radshop</div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="../Index.html">Home</a>
+                <a href="../Contact.html">Contact</a>
+                
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-btn">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../Index/Mens.html">Men's Fashion</a>
+                        <a href="../Index/Women.html">Women's Fashion</a>
+                        <a href="../Index/Accessories.html">Accessories</a>
+                        <a href="../Index/Footwear.html">Footwear</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
+
+<title>Products Section</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h3>Filler lang to hahahaha</h3>
+    <section class="products">
+        <div class="section-title">
+            <h2>Products</h2>
+            <p>Discover our handpicked collection</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/1021-07-2608_57_17.385_0800.jpg" alt="Product 1">
+                    <span class="product-tag">New</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Empress Off-the-Shoulder High-Slit Gown in Navy Blu</h3>
+                    <div class="product-price">₱ 2,580.00</div>
+                    <br>
+                    <p class="product-description">Solid tone cold shoulder evening dress with front slit.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/12022-07-2813_32_35.038_0800_1100x.jpg" alt="Product 2">
+                    <span class="product-tag">Sale</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Cannes Squareneck Wrap Midi Dress in Mocha</h3>
+                    <div class="product-price">₱ 1,280.00</div>
+                    <p class="product-description">Keep it super simple and chic in the Cannes midi dress, designed with an elegant pleated wrap skirt that skims your curves</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/1234021-07-2609_34_03.171_0800_7e9d33c6-9cc0-4c20-b065-2b9b95c0bd42.jpg" alt="Product 3">
+                    <span class="product-tag">Popular</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Cara Off-the-Shoulder Wrap Mini Dress in Maroon</h3>
+                    <div class="product-price">₱ 1,200.00</div>
+                    <br>
+                    <p class="product-description">Solid tone off shoulder skater dress.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/Facetune_09-10-2023-17-24-46.jpg" alt="Product 4">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Vivi Twist Cowl-Neck Midi Dress</h3>
+                    <div class="product-price">₱ 870.00</div>
+                    <p class="product-description">Feminine and alluring, the vivi midi dress is a flattering design created from our premium jersey fabric that sits softly against the skin whilst accentuating your shape.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="cart.js"></script>
+
+
+        <div id="cart"></div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cart = document.querySelector('#cart');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = this.closest('.product-card');
+                    const productName = product.querySelector('.product-name').textContent;
+                    const productPrice = product.querySelector('.product-price').textContent;
+                    addToCart(productName, productPrice);
+                });
+            });
+        });
+        </script>
+
+
+    </section>
+</body>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Modern Ecommerce</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="Mens.css">
+    </head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">radshop</div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links">
+                <a href="../Index.html">Home</a>
+                <a href="../Contact.html">Contact</a>
+                
+
+                <div class="dropdown">
+                    <a href="#" class="dropdown-btn">Categories <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../Index/Mens.html">Men's Fashion</a>
+                        <a href="../Index/Women.html">Women's Fashion</a>
+                        <a href="../Index/Accessories.html">Accessories</a>
+                        <a href="../Index/Footwear.html">Footwear</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
+
+<title>Products Section</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h3>Filler lang to hahahaha</h3>
+    <section class="products">
+        <div class="section-title">
+            <h2>Products</h2>
+            <p>Discover our handpicked collection</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/61wRW+KEUtL._AC_UL1500_.jpg"  height="30%"   alt="Product 1">
+                    <span class="product-tag">New</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Slim Fit Wedding Suit Groomsmen Prom Suit Tuxedo Business Formal Casual Groom Suit Jacket Blazer Pants</h3>
+                    <div class="product-price">₱ 6,233.00</div>
+                    <p class="product-description">Premium comfort with stylish design. Perfect for casual wear.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/61m5DCi2-oL._SS400_.jpg" alt="Product 2">
+                    <span class="product-tag">Sale</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Set Slim Fit Wedding Suit Groomsmen Prom Suit Tuxedo Business Formal Casual Groom Suit Jacket Blazer Pants</h3>
+                    <div class="product-price">₱ 6,199.00</div>
+                    <p class="product-description">Premium comfort with stylish design. Perfect for casual wear.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/6698cc188233ab5ded219dab-men-39-s-3-piece-slim-fit-suit-set-two.jpg" alt="Product 3">
+                    <span class="product-tag">Popular</span>
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Slim Fit Suit Set, Two Button Blazer Solid Jacket Vest Pants Wedding Business Suit</h3>
+                    <div class="product-price">₱ 5,695.00</div>
+                    <br>
+                    <p class="product-description">Premium comfort with stylish design. Perfect for casual wear.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="/img/71ZYjOZ3lWL._SS400_.jpg" alt="Product 4">
+                </div>
+                <div class="product-details">
+                    <h3 class="product-name">Men's Slim Fit 3 Piece Suit Two Button Business Wedding Dress Tux Suit Set Jacket Vest Pants with Tie</h3>
+                    <div class="product-price">₱ 6,233.00</div>
+                    <p class="product-description">Premium comfort with stylish design. Perfect for casual wear.</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="cart.js"></script>
+
+
+        <div id="cart"></div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cart = document.querySelector('#cart');
+            
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const product = this.closest('.product-card');
+                    const productName = product.querySelector('.product-name').textContent;
+                    const productPrice = product.querySelector('.product-price').textContent;
+                    addToCart(productName, productPrice);
+                });
+            });
+        });
+        </script>
+
+
+    </section>
+</body>
